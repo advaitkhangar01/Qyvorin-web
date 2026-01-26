@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import WhyUs from './pages/WhyUs';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/why-us" element={<WhyUs />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

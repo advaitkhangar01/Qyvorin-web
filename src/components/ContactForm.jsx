@@ -21,11 +21,18 @@ const ContactForm = () => {
                 setStatus('success');
                 e.target.reset();
             } else {
+                const data = await response.json().catch(() => ({}));
+                console.error("Form submission failed:", response.status, data);
                 setStatus('error');
+                // Optional: Store error message in state if we want to show it
+                if (data.message) {
+                    alert(`Error: ${data.message}`); // Simple way to show error to user for now
+                }
             }
         } catch (error) {
             console.error("Form submission error:", error);
             setStatus('error');
+            alert("Network error or ad blocker preventing submission.");
         }
     };
 
