@@ -10,6 +10,8 @@ import Projects from './pages/Projects';
 import WhyUs from './pages/WhyUs';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -26,6 +28,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/why-us" element={<WhyUs />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
