@@ -98,19 +98,19 @@ const Home = () => {
                 <div className="services-preview-grid">
                     <div className="service-preview-item">
                         <h3>Web Systems</h3>
-                        <p>High-performance web applications built for scale and speed.</p>
+                        <p>Websites & Web Applications That Work Smoothly.</p>
                     </div>
                     <div className="service-preview-item">
                         <h3>AI & Automation</h3>
-                        <p>Intelligent workflows to reduce manual effort and optimize data.</p>
+                        <p>Automate Tasks and Save Time.</p>
                     </div>
                     <div className="service-preview-item">
                         <h3>CRM Infrastructure</h3>
-                        <p>Custom customer relationship management tailored to your process.</p>
+                        <p>Manage Leads and Customers in One Place.</p>
                     </div>
                     <div className="service-preview-item">
-                        <h3>Digital Strategy</h3>
-                        <p>SEO, SEM, and growth strategies to capture high-intent traffic.</p>
+                        <h3>Google Business & Ads</h3>
+                        <p>Get Found Online and Attract More Customers.</p>
                     </div>
                 </div>
                 <div className="center-btn">

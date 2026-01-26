@@ -6,22 +6,22 @@ import './Services.css';
 const servicesList = [
     {
         title: 'Web Systems',
-        description: 'High-performance web applications built on modern architectures. We prioritize speed, security, and scalability.',
+        description: 'Websites & Web Applications That Work Smoothly. We create websites and web applications that load fast, work reliably, and grow with your business. Whether you need a simple website or a complete system, we build solutions that are easy to use and built to last.',
         tags: ['React', 'Next.js', 'Node.js']
     },
     {
         title: 'AI & Automation',
-        description: 'Intelligent workflows that reduce manual effort. From chatbots to data processing pipelines.',
+        description: 'Automate Tasks and Save Time. We help businesses reduce manual work by using automation and AI. This includes chatbots, automated processes, and smart systems that handle repetitive tasks so your team can focus on important work.',
         tags: ['LLMs', 'Python', 'Workflow Automation']
     },
     {
         title: 'CRM Infrastructure',
-        description: 'Custom CRM solutions tailored to your business processes. Track leads, manage customers, and analyze data.',
+        description: 'Manage Leads and Customers in One Place. We build custom systems to help you manage leads, customers, and business data. You can track follow-ups, store information, and understand your sales performance clearly and easily.',
         tags: ['Custom CRM', 'Integrations', 'Data Analytics']
     },
     {
         title: 'Google Business & Ads',
-        description: 'Strategic visibility. We optimize your digital presence to capture high-intent traffic.',
+        description: 'Get Found Online and Attract More Customers. We improve your online visibility so people can easily find your business on Google. We help with search results, business listings, and ads that bring real customers to you.',
         tags: ['SEO', 'SEM', 'GMB Optimization']
     }
 ];
