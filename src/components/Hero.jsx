@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Button from './Button';
 import LivingSculpture from './LivingSculpture';
 import './Hero.css';
@@ -42,8 +43,12 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                     >
-                        <Button variant="primary">Start a Project</Button>
-                        <Button variant="secondary">View Our Work</Button>
+                        <Link to="/contact">
+                            <Button variant="primary">Start a Project</Button>
+                        </Link>
+                        <Link to="/projects">
+                            <Button variant="secondary">View Our Work</Button>
+                        </Link>
                     </motion.div>
                 </div>
 
@@ -52,7 +57,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="hero-grid-bg"></div>
-        </section>
+        </section >
     );
 };
 
