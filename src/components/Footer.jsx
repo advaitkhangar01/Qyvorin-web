@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoImg from '../assets/qyvorin-logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -7,7 +8,10 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer-container">
                 <div className="footer-brand">
-                    <Link to="/" className="footer-logo">QYVORIN</Link>
+                    <Link to="/" className="footer-logo">
+                        <img src={logoImg} alt="Qyvorin" className="footer-logo-image" />
+                        QYVORIN
+                    </Link>
                     <p className="footer-tagline">Intelligent Web Systems for Business Growth.</p>
                 </div>
 
