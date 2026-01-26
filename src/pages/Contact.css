@@ -1,0 +1,108 @@
+.contact-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.trust-copy {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-methods {
+    margin-bottom: 40px;
+}
+
+.method-item {
+    margin-bottom: 20px;
+}
+
+.method-label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.method-value {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.method-value:hover {
+    color: var(--accent);
+}
+
+.contact-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-form-wrapper {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+@media (max-width: 968px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .contact-form-wrapper {
+        order: 1;
+        margin-bottom: 40px;
+    }
+}

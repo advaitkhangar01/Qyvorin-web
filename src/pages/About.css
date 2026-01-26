@@ -1,0 +1,148 @@
+.page-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    /* Reduced from 60px */
+    align-items: center;
+}
+
+.purpose-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.purpose-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.purpose-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stat-item {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.founder-section {
+    background-color: var(--bg-secondary);
+    margin-top: 40px;
+    /* Reduced from 60px */
+}
+
+.founder-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.founder-image-wrapper {
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+.founder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.founder-border {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--accent);
+    z-index: 1;
+}
+
+.founder-role {
+    display: inline-block;
+    background-color: rgba(0, 122, 255, 0.1);
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.founder-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.founder-info p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.founder-socials {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .purpose-grid,
+    .founder-container {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-image-wrapper {
+        margin: 0 auto;
+    }
+
+    .founder-info {
+        text-align: center;
+    }
+}
+
+/* Specific spacing reduction for About page */
+.about-page .section {
+    padding: 40px 0;
+    /* Reduced from global 64px */
+}

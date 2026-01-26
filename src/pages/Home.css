@@ -1,0 +1,267 @@
+/* General Home Styles */
+.section-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header.center {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.view-all-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+}
+
+.view-all-link:hover {
+    color: var(--accent);
+}
+
+/* 2. About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.about-image {
+    height: 400px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Projects Preview */
+.projects-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .projects-preview-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-preview-card {
+    display: block;
+    text-decoration: none;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.project-preview-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.preview-image-wrapper {
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+
+.preview-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-preview-card:hover .preview-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.preview-info {
+    padding: 20px;
+}
+
+.preview-info h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.preview-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* 4. Services Preview */
+.services-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.service-preview-item {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 220px;
+}
+
+.service-preview-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 243, 255, 0.1), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.service-preview-item:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 243, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.service-preview-item:hover::before {
+    opacity: 1;
+}
+
+.service-preview-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.service-preview-item h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+    margin-top: 10px;
+    transition: width 0.3s ease;
+}
+
+.service-preview-item:hover h3::after {
+    width: 60px;
+}
+
+.service-preview-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.center-btn {
+    text-align: center;
+}
+
+/* 6. Contact Section */
+.home-contact {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.contact-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.contact-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.contact-details-mini p {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.contact-form-container {
+    background-color: var(--bg-primary);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 968px) {
+
+    .about-grid,
+    .contact-split {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        order: -1;
+        /* Image on top for mobile if desired, or remove to keep below */
+        height: 300px;
+    }
+}

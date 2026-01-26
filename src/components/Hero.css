@@ -1,0 +1,179 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 180px;
+    /* Increased to accommodate larger header */
+    overflow: hidden;
+    background-color: #030305;
+    /* Dark background */
+    color: #e0e0e0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #00f3ff;
+    /* Neon Cyan */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.hero-label::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: #00f3ff;
+    margin-right: 10px;
+    box-shadow: 0 0 10px #00f3ff;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.hero-title .text-accent {
+    color: #00f3ff;
+    /* Override global accent */
+    text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    /* Light gray */
+    margin-bottom: 40px;
+    max-width: 480px;
+}
+
+/* Button Overrides for Hero */
+.hero .btn-primary {
+    background-color: #00f3ff;
+    color: #000;
+    border-color: #00f3ff;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero .btn-primary:hover {
+    background-color: #fff;
+    color: #00f3ff;
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
+}
+
+.hero .btn-secondary {
+    color: #00f3ff;
+    border-color: #00f3ff;
+    background: rgba(0, 243, 255, 0.05);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero .btn-secondary:hover {
+    background-color: rgba(0, 243, 255, 0.15);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.hero-visual {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+    pointer-events: none;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+/* Optional: Scanline effect */
+.hero::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+@media (max-width: 968px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-label {
+        justify-content: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-actions button {
+        width: 100%;
+    }
+}
