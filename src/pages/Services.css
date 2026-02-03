@@ -1,62 +1,80 @@
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
 }
 
 .service-card {
     background-color: var(--bg-secondary);
-    padding: 40px;
+    padding: var(--spacing-xl);
     border: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-    transition: border-color var(--transition-fast);
-}
-
-.service-header {
+    border-radius: 8px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding-bottom: 20px;
+    flex-direction: column;
+    height: 100%;
+    transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.service-index {
-    font-family: monospace;
+.service-icon {
     color: var(--accent);
-    font-size: 1.2rem;
-    opacity: 0.5;
+    margin-bottom: var(--spacing-lg);
 }
 
 .service-card h3 {
     font-size: 1.5rem;
-    text-align: right;
-    max-width: 70%;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
 }
 
-.service-card p {
+.service-explanation {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.service-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-xl) 0;
+    flex-grow: 1;
+    /* Pushes tools to bottom */
+}
+
+.service-benefits li {
     color: var(--text-secondary);
-    margin-bottom: 30px;
-    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
 }
 
-.service-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.service-benefits li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
 }
 
-.service-tag {
-    font-size: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 4px 10px;
-    border-radius: 4px;
+.service-tools {
+    font-size: 0.85rem;
     color: var(--text-secondary);
+    opacity: 0.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+    margin-top: auto;
 }
 
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .service-card {
+        padding: var(--spacing-lg);
     }
 }

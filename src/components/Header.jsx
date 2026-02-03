@@ -58,14 +58,16 @@ const Header = () => {
                                         className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                                         onClick={() => setMenuOpen(false)}
                                     >
-                                        {item}
                                         {({ isActive }) => (
-                                            isActive && (
-                                                <motion.div
-                                                    className="active-indicator"
-                                                    layoutId="activeIndicator"
-                                                />
-                                            )
+                                            <>
+                                                {item}
+                                                {isActive && (
+                                                    <motion.div
+                                                        className="active-indicator"
+                                                        layoutId="activeIndicator"
+                                                    />
+                                                )}
+                                            </>
                                         )}
                                     </NavLink>
                                 </li>
